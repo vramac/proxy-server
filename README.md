@@ -14,10 +14,8 @@ Completed:
 * Client requests and respones are printed to stdout
 * The `--logfile` argument outputs all logs to the file specified instead of stdout
 
-Walkthrough Gif:
-[Add walkthrough.gif to the project root]
 
-![Video Walkthrough](demo600.gif)
+![Video Walkthrough](demo770.gif)
 
 Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
 
