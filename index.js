@@ -20,11 +20,12 @@ destinationUrl = argv.host + ':' + port
 
 destinationUrl = argv.url || argv.host + ':' + port
 
-let logPath = argv.log && path.join(__dirname, argv.log)
+let logPath = argv.logFile && path.join(__dirname, argv.logFile)
 let logStream = logPath ? fs.createWriteStream(logPath) : process.stdout
 
 
 http.createServer((req,res) => {
+
 	if (req.headers['x-destination-url'] != null) {
 		destinationUrl = req.headers['x-destination-url']
 	}
@@ -58,4 +59,4 @@ http.createServer((req, res) => {
 
     req.pipe(res)
 
-}).listen(8000)
+}).listen(port)
